@@ -1,0 +1,104 @@
+<nb-card class="card">
+  <nb-card-body>
+
+    <div class="margin-input">
+      <div class="row">
+        <div class="col-sm-10">
+          <input
+            [(ngModel)]="dataModel.area"
+            placeholder="Area"
+            fullWidth
+            status="dark"
+            nbInput
+            id="search"
+            class="search-input"
+          />
+        </div>
+        <div class="col-sm-1">
+          <button status="primary" fullWidth nbButton>
+            <nb-icon icon="search-outline"></nb-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="margin-input">
+      <div class="row">
+        <div class="col-md-3">
+          <nb-select placeholder="Market Type" status="dark" [(ngModel)]="dataModel.marketType">
+            <nb-option value="0">For Sale</nb-option>
+            <nb-option value="1">To Rent</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select placeholder="Property Type" status="dark" (selectedChange)="checkCommercial($event)" [(ngModel)]="dataModel.propertyType">
+            <nb-option value="commercial">Commercial</nb-option>
+            <nb-option value="house">House</nb-option>
+            <nb-option value="apartment">Apartment</nb-option>
+            <nb-option value="studio">Studio Apartment</nb-option>
+            <nb-option value="duplex">Duplex</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select placeholder="Min Price" status="dark" [(ngModel)]="dataModel.minPrice">
+            <nb-option value="0">R 0</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select placeholder="Max Price" status="dark" [(ngModel)]="dataModel.maxPrice">
+            <nb-option value="0">R 1 000 000</nb-option>
+          </nb-select>
+        </div>
+      </div>
+    </div>
+
+    <div class="margin-input-center">
+      <div class="row">
+        <div *ngIf="!showAdvanced" class="col-sm-3">
+          <button (click)="advancedOptionsToggle()" ghost status="primary" nbButton >
+            <nb-icon icon="arrow-ios-downward-outline"></nb-icon>
+            More Options
+          </button>
+          <button (click)="clearFilters()" nbButton ghost nbTooltip="Clear Filters">
+            <nb-icon icon="funnel-outline"></nb-icon>
+          </button>
+        </div>
+        <div *ngIf="showAdvanced"  class="col-sm-3">
+          <button (click)="advancedOptionsToggle()" ghost status="primary" nbButton >
+            <nb-icon icon="arrow-ios-upward-outline"></nb-icon>
+            Less Options
+          </button>
+          <button (click)="clearFilters()" nbButton ghost nbTooltip="Clear Filters">
+            <nb-icon icon ="funnel-outline"></nb-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="showAdvanced" class="margin-input">
+      <div class="row">
+        <div class="col-md-3">
+          <nb-select placeholder="Parking" status="dark" [(ngModel)]="dataModel.parking">
+            <nb-option value="0">10+</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select placeholder="Floor Size m²" status="dark" [(ngModel)]="dataModel.floorSize">
+            <nb-option value="0">100+</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select [disabled]="commercialSelected" placeholder="Bedrooms" status="dark" [(ngModel)]="dataModel.bedrooms">
+            <nb-option value="0">2+</nb-option>
+          </nb-select>
+        </div>
+        <div class="col-md-3">
+          <nb-select [disabled]="commercialSelected"  placeholder="Bathrooms" status="dark" [(ngModel)]="dataModel.bathrooms">
+            <nb-option value="0">2+</nb-option>
+          </nb-select>
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,19 @@
+nb-layout-header {
+  // background-color: lightgray;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(149, 196, 253));
+}
+
+nb-layout-column {
+  background-image: url("../assets/background.jpeg");
+}
+
+.invisible-card{
+  background: rgb(195, 199, 195,  0);
+  border: 0;
+}
+
+.flip-card {
+  //height: 100px !important;
+  clear:none !important;
+}
+
