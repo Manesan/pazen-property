@@ -2,64 +2,272 @@
   <div class="col-sm-12">
     <div class="center-text">
       <h4>Who We Are</h4>
-      <p>*About Us Paragraph Goes Here*</p>
+      <p>
+        Corporate real estate is our core business and our teams, with over 30 of experience and extensive knowledge is
+        key to the advice we provide.
+        With a comprehensive range of services as outlined below, Pazen Property Group can be engaged to provide advice
+        on every aspect of your corporate real estate challenges.
+        Give us a call or drop us a quick email and we will get right back to you.
+        This could be the opportunity you have been looking for to regain some valuable time, optimise your property
+        concerns, or gain financially from a more efficient use of the property you already have.
+        <br>
+        <br>
+        • Property acquisition and divestment
+        Includes providing an understanding of the market and options for acquiring, leasing or disposal of property.
+        <br>
+        • Property leasing
+        Matching your corporate objectives with the lease terms and conditions.
+        <br>
+        • Corporate property consultancy
+        Understanding risk, values and the procurement process from “cradle to grave”
+
+      </p>
     </div>
 
     <br />
     <br />
 
-    <div class="center-text">
+    <div class="center-text" *ngIf="!showServices">
+      <button nbButton ghost outline status="dark" (click)="aboutClick()">View Our Services</button>
+    </div>
+
+
+    <div class="center-text" *ngIf="showServices">
       <h4>What We Offer</h4>
 
       <div class="row">
 
         <div class="col-sm-3">
-          <nb-card>
+          <nb-card class="scrollable">
             <nb-card-header>
-              Property Offerings
+              Lease Reviews - Financial & legal
             </nb-card-header>
             <nb-card-body>
               <p>
-                *Description of Topic Goes Here*
+                Lease disputes often arise between landlord and tenant. We can assist to solve this dispute.
+                <br><br>
+                In most instances where a property is leased to a tenant, there will be a lease document, the lease
+                forms the basis of the contract between the Landlord and the Tenant.
+                <br><br>
+                The concept of a lease has been around for centuries, and sometimes they are still written in very old
+                fashioned difficult to understand language. Sometimes, they are just written by draftsmen who has not
+                clearly phrased the clauses within the lease. It may also be badly written and does not cover the
+                essentials of the agreement.
+                <br><br>
+                Whatever the case, it often results in a lease that needs formal interpretation, and a trained eye to
+                advise on what the lease terms actually mean. Through our experience and expertise we are able to assist
+                in reviewing your lease, either in full, or with a specific query.
+                <br><br>
+                A few examples of the questions you may have are:
+                <br><br>
+                • Am I charging/ being charged the correct amounts?<br>
+                • What alterations can a tenant do without consent?<br>
+                • How much rental should I be charging or paying, is this market related?<br>
+                • What items of expenditure can be recovered as a service charge?<br>
+                • Who is responsible for maintenance of the common areas?<br><br>
+                We are able to assist with all of these questions and more, on a fixed fee basis.
+
               </p>
             </nb-card-body>
           </nb-card>
         </div>
 
         <div class="col-sm-3">
-          <nb-card>
+          <nb-card class="scrollable">
             <nb-card-header>
-              Tax Calculations
+              Property Management & Leasing
             </nb-card-header>
             <nb-card-body>
               <p>
-                *Description of Topic Goes Here*
+                If you want to lease or are leasing commercial property, we are able to provide unique insight and
+                advice across all markets and use classes.<br><br>
+                We offer tailored advice to anyone who's leasing commercial property, on every stage of the transaction
+                process. <br><br>We will present the property by a site viewing or online site viewing, we then guide you
+                through the entire process. We'll market the property, find tenants, conduct viewings and handle the
+                negotiations for you – it's an end-to-end service that's perfect for commercial landlords or tenants.<br><br>
+                We work closely with attorneys drafting the documents so that we can ensure that our client’s interests
+                are protected, and their needs are met. We also provide regular progress updates, any setbacks or
+                opportunities throughout the legal process keeping the client in the loop throughout the process.<br><br>
+                We will undertake all day-to-day management activities of your properties, dealing with service
+                providers, tenants, and overall performance of each property.<br><br>
+                We assume responsibility for timeous collection of rentals, liaise regularly with tenants and ensure a
+                rapid transfer of funds.
+
               </p>
             </nb-card-body>
           </nb-card>
         </div>
 
         <div class="col-sm-3">
-          <nb-card>
+          <nb-card class="scrollable">
             <nb-card-header>
-              Finance Dealings
+              Property Investment Advice
             </nb-card-header>
             <nb-card-body>
               <p>
-                *Description of Topic Goes Here*
+                Pazen Property Group’s investment expertise covers an extensive range of the most attractive real estate
+                sectors. We provide strategic advice to our clients at all stages of the process from sourcing,
+                negotiation, due diligence property management and asset management.<br><br>
+                We provide our clients with strategic and integrated property investment advice, this is a due to the
+                team having in depth knowledge and extensive experience in acquisitions, disposals and development
+                funding across the different sectors. We strive to create value and influence property performance.<br><br> We
+                provide informed, impartial and independent advice to maximise returns.<br><br>
+                To speak to a member of the Investment team today, contact us by calling us on ………………. or complete our
+                online enquiry form and we will get straight back to you.
               </p>
             </nb-card-body>
           </nb-card>
         </div>
 
         <div class="col-sm-3">
-          <nb-card>
+          <nb-card class="scrollable">
             <nb-card-header>
-              Mandate Coverings
+              Corporate Real Estate Advice
             </nb-card-header>
             <nb-card-body>
               <p>
-                *Description of Topic Goes Here*
+                Whether you are an owner, occupier or developer, we deliver tailored solutions designed to add value,
+                minimise risk and achieve the best possible outcomes.<br><br>
+                Pazen Property Group provides an integrated approach to the relationship between your people, your
+                physical space and the process and planning required to deliver you the ideal office, warehouse,
+                industrial or specialised space.<br><br>
+                For building, redeveloping or buying property we can help you make the right decisions.
+                If you are planning a portfolio of owned or leased properties we will work with you to get the right
+                outcome.
+
+              </p>
+            </nb-card-body>
+          </nb-card>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-3">
+          <nb-card class="scrollable">
+            <nb-card-header>
+              Bookkeeping & Accounting Services
+            </nb-card-header>
+            <nb-card-body>
+              <p>
+                Specialising in property taxes and financial structuring of property acquisitions.<br><br>
+
+                We will prepare financial statements, create a practical budget and handle your month-end closings.
+                Throughout the year, we’ll keep you informed with regular reports you can use to control costs and
+                monitor cash flow. Since the business structure you select has a significant effect on your tax
+                liability, we’ll identify the entity that will keep taxes low while ensuring you’re in compliance with
+                all tax regulations.<br><br>
+
+                Outsourced Accounting – is an all-inclusive solution that offers small businesses relief from the
+                day-to-day accounting hassles while providing 24/7 access to financial data, prepare tax returns and
+                supply valuable financial and tax advice throughout the year.<br><br>
+
+                We train your company’s designated point of contact on the process of providing our staff with the daily
+                information required and teach them how to access the system from our website.<br><br>
+
+                Reconciliations of Tenant/Landlord accounts Reconciliations of bank accounts, debtors and creditors
+
+              </p>
+            </nb-card-body>
+          </nb-card>
+        </div>
+
+        <div class="col-sm-3">
+          <nb-card class="scrollable">
+            <nb-card-header>
+              Property Due Dilligence
+            </nb-card-header>
+            <nb-card-body>
+              <p>
+                Value in commercial properties is determined inversely to the risk posed to the income of the property.
+                Multi tenanted properties in both Commercial and Retail are the most complicated.<br><br>
+
+                The function of due diligence is to verify and understand the risks involved.
+                Usually the list of Due Diligence items should be disclosed during the acquisition negotiations and
+                included in the purchase agreement.<br><br>
+                Every document relating to the operation of the building must be checked. Including leases, addendums,
+                mortgages, title deeds, compliance certificates, insurance policies, maintenance contracts licences etc.
+                Our team will provide the entire due diligence in the time stipulated in the agreement.
+
+              </p>
+            </nb-card-body>
+          </nb-card>
+        </div>
+
+        <div class="col-sm-3">
+          <nb-card class="scrollable">
+            <nb-card-header>
+              Office Relocation & Tenant Fitout
+            </nb-card-header>
+            <nb-card-body>
+              <p>
+                If you are looking to relocate your business, we can help you with a step by step process.<br><br>
+
+                If your current space is too large or too small, we will advise you of your options to exit the current
+                lease obligations. Renegotiating a commercial lease is much more complex than a residential lease.<br><br>
+
+                We are able to save clients time and money because we know where to look and we know how to negotiate
+                with landlords to finalise these transactions amicably.<br><br>
+
+                We work with highly skilled interior designers and contractors who can, and have often, worked within
+                very tight time frames to deliver clients to their new premises on time and on budget.<br><br>
+
+                Contact us for a more detailed discussion regarding your relocation and tenant installation needs.
+
+              </p>
+            </nb-card-body>
+          </nb-card>
+        </div>
+
+
+
+        <div class="col-sm-3">
+          <nb-card class="scrollable">
+            <nb-card-header>
+              Property Compliance Assessments
+            </nb-card-header>
+            <nb-card-body>
+              <p>
+                We can assist you to get your properties compliant in the following areas:<br><br>
+
+                • OHS Compliance
+                <br>
+                • Electrical compliance
+                <br>
+                • Plumbing compliance
+                <br>
+                • Occupation certificates
+
+              </p>
+            </nb-card-body>
+          </nb-card>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-3">
+          <nb-card class="scrollable">
+            <nb-card-header>
+              Energy & HVAC Management
+            </nb-card-header>
+            <nb-card-body>
+              <p>
+                Contact us for any of the following services:<br><br>
+
+                • Renewable Energy
+                <br>
+                • Energy Efficiency
+                <br>
+                • Utility Optimisation
+                <br>
+                • HVAC Optimisation
+                <br>
+                • Solar Powered solutions for the office and home
+
               </p>
             </nb-card-body>
           </nb-card>
@@ -69,5 +277,3 @@
     </div>
   </div>
 </div>
-
-

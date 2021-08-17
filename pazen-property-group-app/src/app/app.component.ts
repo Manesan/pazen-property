@@ -19,7 +19,10 @@ export class AppComponent {
   showProfile: boolean = false;
   showProperty: boolean = false;
 
+
+
   toggleHome($event: any){
+    window.scroll(0,0);
     if($event){
       if(this.flipped){
         this.flipped = !this.flipped
@@ -29,6 +32,7 @@ export class AppComponent {
 
 
   toggleAbout($event: any){
+    window.scroll(0,0);
     if($event){
       this.showAbout = true;
       this.showContact = false;
@@ -41,6 +45,7 @@ export class AppComponent {
     }
   }
   toggleContact($event: any){
+    window.scroll(0,0);
     if($event){
       this.showAbout = false;
       this.showContact = true;
@@ -53,6 +58,7 @@ export class AppComponent {
     }
   }
   toggleSaved($event: any){
+    window.scroll(0,0);
     if($event){
       this.showAbout = false;
       this.showContact = false;
@@ -65,6 +71,7 @@ export class AppComponent {
     }
   }
   toggleProfile($event: any){
+    window.scroll(0,0);
     if($event){
       this.showAbout = false;
       this.showContact = false;
@@ -78,6 +85,7 @@ export class AppComponent {
   }
 
   toggleViewProperty($event: any){
+    window.scroll(0,0);
     if($event){
       this.showAbout = false;
       this.showContact = false;

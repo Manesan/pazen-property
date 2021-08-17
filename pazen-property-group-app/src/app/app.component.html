@@ -15,7 +15,7 @@
       <nb-card-front>
         <nb-card class="invisible-card">
           <nb-card-body>
-            <app-home (viewClicked)="toggleViewProperty($event)"></app-home>
+            <app-home (aboutClicked)="toggleAbout($event)"  (viewClicked)="toggleViewProperty($event)"></app-home>
           </nb-card-body>
         </nb-card>
       </nb-card-front>
@@ -24,7 +24,7 @@
       <nb-card-back  *ngIf="showAbout">
         <nb-card >
           <nb-card-body>
-            <app-about></app-about>
+            <app-about ></app-about>
           </nb-card-body>
         </nb-card>
       </nb-card-back>
@@ -67,7 +67,7 @@
       </nb-card-back>
 
     </nb-flip-card>
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
   </nb-layout-column>
 
   <nb-layout-footer fixed>

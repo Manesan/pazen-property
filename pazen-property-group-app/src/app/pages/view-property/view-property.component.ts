@@ -9,7 +9,7 @@ export class ViewPropertyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

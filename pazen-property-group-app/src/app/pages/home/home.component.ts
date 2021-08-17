@@ -8,15 +8,21 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   @Output() viewClicked: EventEmitter<boolean> = new EventEmitter();
+  @Output() aboutClicked: EventEmitter<boolean> = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   viewPropertyClick($event: any){
     if($event){
       this.viewClicked.emit(true);
     }
+  }
+
+  goToAbout($event: any){
+    this.aboutClicked.emit(true);
   }
 
 }

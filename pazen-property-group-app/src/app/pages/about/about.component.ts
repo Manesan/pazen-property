@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  @Input() showServices: boolean = true;
+  @Output() aboutClicked: EventEmitter<boolean> = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  aboutClick(){
+    this.aboutClicked.emit(true);
   }
 
 }
